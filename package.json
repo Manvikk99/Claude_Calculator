@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A simple browser calculator built with vanilla HTML, CSS, and JavaScript.",
+  "license": "MIT",
+  "author": "Manvik Sharma",
+  "private": true,
+  "scripts": {
+    "start": "npx serve public",
+    "dev": "npx serve public",
+    "test": "node --test"
+  },
+  "keywords": [
+    "calculator",
+    "vanilla-js",
+    "html",
+    "css"
+  ]
+}
