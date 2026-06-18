@@ -24,9 +24,38 @@ body {
   z-index: 0;
 }
 
+#quotes-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floating-quote {
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-name: drift;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes drift {
+  0%   { transform: translateX(-30vw) translateY(0);    opacity: 0; }
+  10%  { opacity: 0.9; }
+  50%  { transform: translateX(55vw)  translateY(-12px); }
+  90%  { opacity: 0.9; }
+  100% { transform: translateX(130vw) translateY(8px);  opacity: 0; }
+}
+
 .calculator {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 320px;
   background: #22223a;
   border-radius: 16px;
